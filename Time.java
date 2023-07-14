@@ -1,41 +1,30 @@
-
-import java.util.Scanner;
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
 /**
  *
- * @author Amrit
+ * @author LEANDRINHO
  */
 public class Time {
+    
     private int numOfHours;
     private int numOfMinutes;
     private int numOfSeconds;
     
-    public Time(){
-        numOfHours = 0;
-        numOfMinutes = 0;
-        numOfSeconds = 0;
-    
+    public TimeAssignment(){
+ 
+    numOfHours = "(countTime / 3600)";
+    numOfMinutes = "(numOfHours - 2) * 60";
+    numOfSeconds = "numOfMninutes / 60";
     }
     
-    public void convert(int totalSeconds){
-    numOfHours = (totalSeconds / 3600);
-    numOfMinutes = (numOfHours - 2) * 60;
-    numOfSeconds = numOfMinutes / 60;
-    // " " are reserved only for Strings, numbers / mathematical formulas are not surrounded by  " "
-    }
-    
-    //as we are calculating number of hours, minutes and seconds, so there is no point of setting them in the constructor.
-    //Likewise, we cannot make setters to set their values. convert() methpd will calculates the numbers.
-   /* public TimeAssignment(int hours, int minutes, int seconds) {
+    public TimeAssignment(int hours, int minutes, int seconds) {
         numOfHours = hours;
         numOfMinutes = minutes;
         numOfSeconds = seconds;
-    }*/
+    }
     
     public int getNumOfHours(){
         return numOfHours;
@@ -49,24 +38,16 @@ public class Time {
         return numOfSeconds;
     }
 
-    /* Though I fixed them, but do not use them for this program as they have no purpose here
-     * the value to copy in the field must be passed in the parameter.
-    
-    public void setNumOfHours(int hours){
+    public void SetNumOfHours{
         numOfHours = hours;
     }
     
-    public void setNumOfMinutes(int minutes){  
+    public void setNumOfMinutes{
         numOfMinutes = minutes;
     }
 
-    public void setNumOfSeconds(int seconds){
+    public void setNumOfSeconds{
         numOfSeconds = seconds;
     }
-*/
-
-    void convert(Time totalSeconds) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
 }
+
