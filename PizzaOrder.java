@@ -40,8 +40,21 @@ public class PizzaOrder {
     public void getPizzaOrder(Scanner scan){
     	System.out.println("Enter size of pizza");
         size = scan.next();
-        System.out.println("How many toppings you want?");
+       
+        //Using while loop
+       /* System.out.println("How many toppings you want?");
         numOfToppings = scan.nextInt();
+        while(numOfToppings < 2 || numOfToppings > 5){
+             System.out.println("How many toppings you want?");
+             numOfToppings = scan.nextInt();
+        }*/
+        
+       //using do-while loop
+       do{
+           System.out.println("How many toppings you want?");
+             numOfToppings = scan.nextInt(); 
+        }while(numOfToppings < 2 || numOfToppings > 5);
+       
         System.out.println("Which toppings you want? Cheese is free. \nExtra toppings will cost you $2 each");
         nameOfTopping = "Cheese";
         for(int i = 0; i < numOfToppings; i++){
